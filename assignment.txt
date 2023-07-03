@@ -1,0 +1,9 @@
+Since your projects are all taking different approaches and User stories we made  
+this iteration deliverable rather simple so you can focus as much as possible on
+ customziing and making the app your own! Same deliverables regardless of the 
+ project you chose.
+
+Incorporate a Form component in your app
+Style the Form Component 
+Refactor your component hierarchy to lift and handle State in the proper higher-level
+ components refer to the lecture
