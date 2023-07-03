@@ -55,6 +55,7 @@ function App() {
 
   const showModal = () => {
     setIsModalVisible(true);
+    console.log("hello");
   }
 
    const hideModal = () => {
@@ -64,6 +65,7 @@ function App() {
   const handleAddJobFormSubmit = (e) => {
     e.preventDefault();
   }
+
   return (
     
     <div>
@@ -77,7 +79,7 @@ function App() {
       <RecipeList recipes={recipes[0]} />
       <RecipeList recipes={recipes[1]} />
       <RecipeList recipes={recipes[2]} />
-      
+     {/*
     <Modal 
       isVisible={isModalVisible}
       hideModal={hideModal} >
@@ -126,7 +128,8 @@ function App() {
           </fieldset>
           
         </form>
-    </Modal>
+  </Modal> */}
+  <Modal isVisible={isModalVisible} isHandle={handleAddJobFormSubmit} />
 
     </div>
      
