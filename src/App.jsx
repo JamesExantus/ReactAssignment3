@@ -4,7 +4,7 @@ import {RecipeList, List, SearchBar} from './RecipeList'
 import {foods, filterItems,} from './recipes'
 import './App.css';
 import './styles.css';
-import Modal from './ui/modal';
+import Modal from  './ui/modal';
 
 const statuses = {
   1: "easy",
@@ -13,16 +13,7 @@ const statuses = {
  
 };
 
-
-
-
-
-
-
-
 function App() {
- 
-
  
 
  const [query, setQuery] = useState('');
@@ -55,6 +46,12 @@ function App() {
     e.preventDefault();
   }
 
+  const handleAddRecipe = (e) => {
+    
+
+  }
+
+
   return (
     
     <div>
@@ -77,6 +74,8 @@ function App() {
      
     
   )
+  
+
 }
 export default App
 

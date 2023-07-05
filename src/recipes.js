@@ -22,12 +22,12 @@ export const foods = [{
   description: 'Preheat oven to 350, bake for 45 minutes'
 }, {
   id: 3,
-  name: 'Shish kebab',
-  description: 'Shish kebab is a popular meal of skewered and grilled cubes of meat.'
+  name: 'brownies',
+  description: 'Preheat oven to 350, bake for 45 minutes'
 }, {
   id: 4,
-  name: 'Dim sum',
-  description: 'Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch'
+  name: 'croissant',
+  description: 'Preheat oven to 350, bake for 45 minutes'
 }];
 
 

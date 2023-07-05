@@ -1,6 +1,13 @@
-//modal active but styling not showing for some reason 
+
+
+//odal active but styling not showing for some reason 
+import {useState} from 'react'
 
 function Modal({isVisible, isHandle}) {
+  const [recipeName, setRecipeName] = useState('');
+  const [directions, setDirections] = useState('');
+  const [difficulty, setDifficulty] = useState('');
+  const [stars, setStars] = useState('');
     console.log(isVisible);
     if(!isVisible) {return null}
     return (
@@ -19,6 +26,7 @@ function Modal({isVisible, isHandle}) {
               name="name"
               id="name"
               className="bg-white border-4 focuse:outline-none"
+              onChange={(e) => setRecipeName(e.target.value)}
               />
           </fieldset>
 
@@ -29,6 +37,7 @@ function Modal({isVisible, isHandle}) {
               name="directions"
               id="directions"
               className="bg-white border-4 focuse:outline-none"
+              onChange={(e) => setDirections(e.target.value)}
               />
           </fieldset>
 
@@ -39,10 +48,10 @@ function Modal({isVisible, isHandle}) {
               name="Difficulty"
               id="Difficulty"
               className="bg-white border-4 focuse:outline-none"
+              onChange={(e) => setDifficulty(e.target.value)}
               />
           </fieldset>
         
-
            <fieldset className="flex flex-col">
             <label htmlFor="title">Stars</label>
             <input
@@ -50,6 +59,7 @@ function Modal({isVisible, isHandle}) {
               name="stars"
               id="stars"
               className="bg-white border-4 focuse:outline-none"
+              onChange={(e) => setStars(e.target.value)}
               />
           </fieldset>
           
@@ -61,6 +71,7 @@ function Modal({isVisible, isHandle}) {
     )
 
 }
+
 
 
 
