@@ -9,4 +9,49 @@ Refactor your component hierarchy to lift and handle State in the proper higher-
  components refer to the lecture
 
 
- 
+ // Example we went over
+
+const recipe = { 
+  description: 'Some description',
+  image: 'Some Image'
+};
+const recipe2 = { 
+  description: 'Some description2',
+  image: 'Some Image2'
+};
+
+const recipes = [recipe, recipe2];
+
+
+function RecipeList({ recipes }) {
+  return recipes.map(recipe => {
+    return (
+      <div>
+        <p>{recipe.description}</p>
+        <p>{recipe.image}</p>
+      </div>
+    )
+  })
+};
+
+<SearchBar/> // <-- What does this have to do to filter?
+<RecipeList/>
+
+
+// <SearchBar/>
+// 1. Allows user to type in some words
+// 2. If words match something within recipes
+//    - It will filter out recipes
+//      - setFilteredRecipes(recipesFilteredByUser)
+function App() {
+
+  const [filteredRecipes, setFilteredRecipes] = useState(recipes);
+
+  return (
+    <>
+      <SearchBar setFilteredRecipes={setFilteredRecipes} />
+      <RecipeList recipes={filteredRecipes}/>
+    </>
+  )
+}
+

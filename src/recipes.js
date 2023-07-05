@@ -1,4 +1,39 @@
- const recipes = [
+
+export function filterItems(items, query) {
+  query = query.toLowerCase();
+  return items.filter(item =>
+    item.name.split(' ').some(word =>
+      word.toLowerCase().startsWith(query)
+    )
+  );
+}
+
+export const foods = [{
+  id: 0,
+  name: 'cake',
+  description: 'Preheat oven to 350, bake for 45 minutes'
+}, {
+  id: 1,
+  name: 'pie',
+  description: 'Preheat oven to 350, bake for 45 minutes'
+}, {
+  id: 2,
+  name: 'cookies',
+  description: 'Preheat oven to 350, bake for 45 minutes'
+}, {
+  id: 3,
+  name: 'Shish kebab',
+  description: 'Shish kebab is a popular meal of skewered and grilled cubes of meat.'
+}, {
+  id: 4,
+  name: 'Dim sum',
+  description: 'Dim sum is a large range of small dishes that Cantonese people traditionally enjoy in restaurants for breakfast and lunch'
+}];
+
+
+/*
+
+const recipes = [
     {
         id:1,
         image: {
@@ -38,3 +73,4 @@
  ]
 
  export default recipes
+ */
